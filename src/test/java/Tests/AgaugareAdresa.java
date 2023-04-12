@@ -57,9 +57,9 @@ public class AgaugareAdresa {
         WebElement AdresaFacturare = driver.findElement(By.id("create-new-shipping-address"));
         AdresaFacturare.click();
 
-        WebElement Nume = driver.findElement(By.xpath("//input[@name='customer_full_name']"));
-        String NumeValue = "Velicu Ana";
-        Nume.sendKeys(NumeValue);
+        WebElement Judet = driver.findElement(By.xpath("//input[@name='county_id']/..//input[@id='NaN']"));
+        Judet.sendKeys("Calarasi");
+        Judet.sendKeys(Keys.ENTER);
 
         WebElement Telefon = driver.findElement(By.xpath("//input[@name='customer_phone']"));
         String TelefonValue = "0722222222";
@@ -69,9 +69,13 @@ public class AgaugareAdresa {
         String AdresaValue = "str. Belsugului, nr.1";
         Adresa.sendKeys(AdresaValue);
 
-        WebElement Judet = driver.findElement(By.id("NaN"));
-        Judet.sendKeys("Calarasi");
-        Judet.sendKeys(Keys.ENTER);
+        WebElement Localitate = driver.findElement(By.xpath("//input[@name='city_id']/..//input[@id='NaN']"));
+        Localitate.sendKeys("Dragalina");
+        Localitate.sendKeys(Keys.ENTER);
+
+        WebElement Nume = driver.findElement(By.xpath("//input[@name='customer_full_name']"));
+        String NumeValue = "Velicu Ana";
+        Nume.sendKeys(NumeValue);
 
         WebElement Salveaza = driver.findElement(By.id("add-new-address-btn"));
         Salveaza.click();
