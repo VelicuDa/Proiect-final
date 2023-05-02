@@ -1,6 +1,5 @@
 package Tests;
 
-import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +10,12 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class AgaugareAdresa {
+public class AdaugareAdresa {
 
     public WebDriver driver;
     @Test
     public void AdaugareAdresa() {
+
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
         ChromeOptions option = new ChromeOptions();
